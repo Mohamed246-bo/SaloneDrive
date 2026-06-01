@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accident Reports - SaloneDrive</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<section class="section">
+
+<h1>🚨 Accident Reports</h1>
+
+<form id="accidentForm">
+
+<input
+type="text"
+id="location"
+placeholder="Accident Location"
+required>
+
+<textarea
+id="description"
+placeholder="Describe the accident"
+required></textarea>
+
+<button type="submit">
+Report Accident
+</button>
+
+</form>
+
+</section>
+
+<section class="section">
+
+<h2>Recent Reports</h2>
+
+<div id="reports"></div>
+
+</section>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
