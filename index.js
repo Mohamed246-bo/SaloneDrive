@@ -1,3 +1,10 @@
+function() {
+/*
+logo_url("/driver_icons/js.png")
+visibility("PRIVATE")
+created_timestamp(1780405445522)
+base_component_id("88de9010-5e83-11f1-a389-43cd52be6728")
+*/
 // ==========================
 // FAST INIT (NON-BLOCKING)
 // ==========================
@@ -149,3 +156,4 @@ center: freetown,
 zoom: 12
 });
 };
+}
