@@ -7,51 +7,51 @@
 <title>SaloneDrive Community</title>
 
 <link rel="stylesheet" href="index.html">
-</head>
-
-<body>
-
 <header>
-    <h1>🚦 SaloneDrive Community</h1>
-
-    <nav>
-        <a href="index.html">🏠 Home</a>
-    </nav>
+  <h1>🚦Community</h1>
 </header>
 
-<div class="container">
+<section class="create-post">
 
-    <div class="community-form">
+<input
+type="text"
+id="username"
+placeholder="Your Name">
 
-        <h2>Create Post</h2>
+<select id="category">
 
-        <input
-        type="text"
-        id="username"
-        placeholder="Your Name">
+<option>Traffic Update</option>
 
-        <textarea
-        id="message"
-        placeholder="Share traffic updates, road conditions, transport news..."
-        rows="5"></textarea>
+<option>Accident Report</option>
 
-        <button id="postBtn">
-            Post Update
-        </button>
+<option>Road Condition</option>
 
-    </div>
+<option>Question</option>
 
-    <div class="community-feed">
+<option>News</option>
 
-        <h2>Recent Posts</h2>
+</select>
 
-        <div id="posts"></div>
+<textarea
+id="message"
+placeholder="Share with the community">
+</textarea>
 
-    </div>
+<button id="postBtn">
+Post
+</button>
 
-</div>
+</section>
 
-<script src="community.js"></script>
+<section>
 
-</body>
-</html>
+<input
+type="text"
+id="searchInput"
+placeholder="Search posts">
+
+</section>
+
+<section id="posts">
+
+</section>
