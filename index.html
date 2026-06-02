@@ -1,29 +1,22 @@
-function() {
-/*
-logo_url("/driver_icons/js.png")
-visibility("PRIVATE")
-created_timestamp(1780405392251)
-base_component_id("691d7160-5e83-11f1-a389-43cd52be6728")
-*/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>salonedrive-3ea79</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaloneDrive - Freetown Transport</title>
 
-<link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link rel="stylesheet" href="Safetyguide.html">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyCjaq8fotBKSaW  gp5suqYI2O130EUrn0RM&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKm11PREoeC_b3q5Vw5Fy1RP4OvJWvXWg&callback=initMap" async defer></script>
 </head>
+
 <body>
-<li><a href="accident.html">Give Update</a></li>
+
+<!-- LOADER -->
 <div id="loader"><div class="spinner"></div></div>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo"><i class="fas fa-route"></i> SaloneDrive</div>
 
@@ -32,68 +25,67 @@ base_component_id("691d7160-5e83-11f1-a389-43cd52be6728")
     <li><a href="#calculator">Calculator</a></li>
     <li><a href="#mapSection">Map</a></li>
     <li><a href="#routes">Routes</a></li>
-    <li><a href="safety.html" class="safety-link">Safety Guide</a></li>
+    <li><a href="Safetyguide.html">Safety Guide</a></li>
   </ul>
 
   <button id="themeToggle">🌙</button>
 </nav>
-    <section class="nav-section">
-  <a href="Safetyguide.html" class="safety-link">
-    ⬅ Go To Safety Guide
-  </a>
-  </section>
-<!-- HERO -->
+
+<!-- HERO SECTION -->
 <section class="hero">
   <h1>Freetown Smart Transport System</h1>
   <p>Find routes & fares across Sierra Leone easily</p>
 </section>
 
-<!-- CALCULATOR -->
+<!-- FARE CALCULATOR -->
 <section id="calculator" class="section">
-<h2>Fare Calculator</h2>
+  <h2>💰 Fare Calculator</h2>
 
-<div class="glass">
-<select id="from"></select>
-<select id="to"></select>
+  <div class="glass">
+    <label for="from">From Location:</label>
+    <select id="from">
+      <option value="">Select location...</option>
+    </select>
 
-<select id="transportType">
-  <option>Keke</option>
-  <option>Poda Poda</option>
-  <option>Taxi</option>
-</select>
+    <label for="to">To Location:</label>
+    <select id="to">
+      <option value="">Select location...</option>
+    </select>
 
-<button id="calculateBtn">Calculate Fare</button>
-<div id="result"></div>
-</div>
+    <label for="transportType">Transport Type:</label>
+    <select id="transportType">
+      <option value="Keke">🛺 Keke</option>
+      <option value="Poda Poda">🚌 Poda Poda</option>
+      <option value="Taxi">🚕 Taxi</option>
+    </select>
+
+    <button id="calculateBtn">Calculate Fare</button>
+    <div id="result"></div>
+  </div>
 </section>
 
-<!-- MAP -->
+<!-- MAP SECTION -->
 <section id="mapSection" class="section">
-<h2>Live Map - Freetown</h2>
-<div id="map"></div>
+  <h2>🗺️ Live Map - Freetown</h2>
+  <div id="map"></div>
 </section>
 
-<!-- ROUTES -->
+<!-- POPULAR ROUTES -->
 <section id="routes" class="section">
-<h2>Popular Routes</h2>
-<div id="popularRoutes" class="card-grid"></div>
+  <h2>🛣️ Popular Routes</h2>
+  <div id="popularRoutes" class="card-grid"></div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 SaloneDrive</p>
+  <p>© 2026 SaloneDrive - Sierra Leone Transport System</p>
 </footer>
 
 <script src="index.js"></script>
-</body>
 <script type="module">
-  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyCKm11PREoeC_b3q5Vw5Fy1RP4OvJWvXWg",
     authDomain: "salonedrive-3ea79.firebaseapp.com",
@@ -104,9 +96,9 @@ base_component_id("691d7160-5e83-11f1-a389-43cd52be6728")
     measurementId: "G-8DBM5MPGKQ"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+
+</body>
 </html>
-}
