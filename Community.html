@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SaloneDrive Community</title>
+
+<link rel="stylesheet" href="community.css">
 </head>
+
 <body>
 
-<h1>SaloneDrive Community</h1>
+<header>
+    <h1>🚦 SaloneDrive Community</h1>
 
-<p>Community page under development.</p>
+    <nav>
+        <a href="index.html">🏠 Home</a>
+    </nav>
+</header>
 
-<a href="index.html">Back Home</a>
+<div class="container">
+
+    <div class="community-form">
+
+        <h2>Create Post</h2>
+
+        <input
+        type="text"
+        id="username"
+        placeholder="Your Name">
+
+        <textarea
+        id="message"
+        placeholder="Share traffic updates, road conditions, transport news..."
+        rows="5"></textarea>
+
+        <button id="postBtn">
+            Post Update
+        </button>
+
+    </div>
+
+    <div class="community-feed">
+
+        <h2>Recent Posts</h2>
+
+        <div id="posts"></div>
+
+    </div>
+
+</div>
+
+<script src="community.js"></script>
 
 </body>
 </html>
